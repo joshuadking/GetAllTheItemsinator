@@ -118,16 +118,17 @@ def chestvis(starting_slot, searched_value):
     for i in range(len(index_viewer)):
         if index_viewer[i] == searched_value:
             index_viewer[i] = f'{Fore.GREEN}' + searched_value + f'{Style.RESET_ALL}'
+        # All other slots are blank formatted so all text will be the same size and even in the console.
         else:
             index_viewer[i] = f'{Fore.RESET}' + index_viewer[i] + f'{Style.RESET_ALL}'
 
-    # Splits the 54-entry array into 6 even sub-arrays, similating 6 double chest rows.
+    # Splits the 54-entry array into six even sub-arrays, simulating six double chest rows.
     sorted_view = [index_viewer[i:i + 9] for i in range(0, len(index_viewer), 9)]
 
     # Reorganize data by columns
     cols = zip(*sorted_view)
 
-    # Compute column widths by taking maximum length of values per column
+    # Compute column widths by taking the maximum length of values per column
     col_widths = [max(len(value) for value in col) for col in cols]
 
     # Create a format string
