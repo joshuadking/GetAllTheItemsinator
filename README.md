@@ -2,6 +2,7 @@
 A test tool that allows for an easy look at where and how to manage every item in the game.
 
 ## Understanding the code:
+This program should be opened in a Command Prompt/Shell (bash) and is designed to look like a basic bash shell with non-root privileges ("jk$ ")
 There are three major files in this project, these files include,
 1. GetAllTheItemsinator.py - Where all the main code and logic are stored.
 2. items_list.csv - A large table including all the major in-game items (minus potions, trims, etc.)
